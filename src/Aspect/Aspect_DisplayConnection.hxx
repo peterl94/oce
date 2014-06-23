@@ -23,6 +23,14 @@
 
 #if !defined(_WIN32) && !defined(__WIN32__) && (!defined(__APPLE__) || defined(MACOSX_USE_GLX))
   #include <X11/Xlib.h>
+
+  // workaround name conflicts with OCCT methods
+  #ifdef Convex
+    #undef Convex
+  #endif
+  #ifdef Status
+    #undef Status
+  #endif
 #endif
 
 //! This class creates and provides connection with X server.

@@ -13,14 +13,11 @@
 // Alternatively, this file may be used under the terms of Open CASCADE
 // commercial license or contractual agreement.
 
-#include <Xw_Window.hxx>
-
 #if !defined(_WIN32) && (!defined(__APPLE__) || defined(MACOSX_USE_GLX))
-
+#include <GL/glx.h>
+#include <Xw_Window.hxx>
 #include <Aspect_Convert.hxx>
 #include <Aspect_WindowDefinitionError.hxx>
-
-#include <GL/glx.h>
 
 namespace
 {
